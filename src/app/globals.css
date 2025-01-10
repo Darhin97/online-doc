@@ -89,7 +89,6 @@ body {
 
 
 .tiptap {
-
   /* Link styles */
   a {
    @apply text-blue-600;
@@ -258,12 +257,11 @@ body {
       margin: 0;
     }
   }
-
 }
 
 /*npm install @tiptap/extension-underline@2.10.2 --legacy-peer-deps*/
 
-
+/*  4:35:03 */
 
 
 
