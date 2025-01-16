@@ -6,7 +6,6 @@ import { TableRow, TableCell } from "@/components/ui/table";
 import { SiGoogledocs } from "react-icons/si";
 import { Building2Icon, CircleUserIcon } from "lucide-react";
 import DocumentMenu from "@/components/document-menu";
-import { id } from "date-fns/locale";
 
 interface DocumentRowProps {
   document: Doc<"documents">;
