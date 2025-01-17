@@ -2,12 +2,7 @@ import { Editor } from "@/app/documents/[documentId]/editor";
 import { Toolbar } from "@/app/documents/[documentId]/toolbar";
 import Navbar from "@/app/documents/[documentId]/navbar";
 
-interface DocumentIdPageProps {
-  params: Promise<{ documentId: string }>;
-}
-const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
-  // const { documentId } = await params;
-
+const DocumentIdPage = async () => {
   return (
     <div className={"min-h-screen bg-[#fafbfd]"}>
       <div
