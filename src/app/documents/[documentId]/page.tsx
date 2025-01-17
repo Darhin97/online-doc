@@ -12,7 +12,7 @@ const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
     <div className={"min-h-screen bg-[#fafbfd]"}>
       <div
         className={
-          "flex flex-col px-4 pt-2 gap-y-2 fixed top-0 left-0 ring-0 z-10 bg-[#fafbfd] print:hidden"
+          "flex flex-col px-4 pt-2 gap-y-2 fixed top-0 left-0 ring-0 z-10 bg-[#fafbfd] print:hidden w-full"
         }
       >
         <Navbar />
