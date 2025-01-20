@@ -1,6 +1,7 @@
 import { Editor } from "@/app/documents/[documentId]/editor";
 import { Toolbar } from "@/app/documents/[documentId]/toolbar";
 import Navbar from "@/app/documents/[documentId]/navbar";
+import { Room } from "@/app/documents/[documentId]/room";
 
 const DocumentIdPage = async () => {
   return (
@@ -14,7 +15,9 @@ const DocumentIdPage = async () => {
         <Toolbar />
       </div>
       <div className={"pt-[114px] print:pt-0"}>
-        <Editor />
+        <Room>
+          <Editor />
+        </Room>
       </div>
     </div>
   );

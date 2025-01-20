@@ -15,6 +15,7 @@ import { Color } from "@tiptap/extension-color";
 import Highlight from "@tiptap/extension-highlight";
 import Link from "@tiptap/extension-link";
 import TextAlign from "@tiptap/extension-text-align";
+import { useLiveblocksExtension } from "@liveblocks/react-tiptap";
 
 import { FontSizeExtension } from "@/extensions/font-size";
 import { LineHeightExtension } from "@/extensions/line-height";
@@ -22,8 +23,10 @@ import { LineHeightExtension } from "@/extensions/line-height";
 import { useEditor, EditorContent } from "@tiptap/react";
 import { useEditorStore } from "@/store/use-editor-store";
 import { Ruler } from "@/app/documents/[documentId]/ruler";
+import { Threads } from "@/app/documents/[documentId]/threads";
 
 export const Editor = () => {
+  const liveblocks = useLiveblocksExtension();
   const { setEditor } = useEditorStore();
 
   const editor = useEditor({
@@ -60,7 +63,8 @@ export const Editor = () => {
       },
     },
     extensions: [
-      StarterKit,
+      StarterKit.configure({ history: false }),
+      liveblocks,
       FontSizeExtension,
       LineHeightExtension.configure({
         types: ["heading", "paragraph"],
@@ -100,6 +104,7 @@ export const Editor = () => {
         }
       >
         <EditorContent editor={editor} />
+        <Threads editor={editor} />
       </div>
     </div>
   );
