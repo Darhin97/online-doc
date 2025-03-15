@@ -4,7 +4,7 @@ interface IFullscreenLoader {
   label?: string;
   className?: string;
 }
-export const FullscreenLoader = ({ label, className }: IFullscreenLoader) => {
+export const FullscreenLoader = ({ label }: IFullscreenLoader) => {
   return (
     <div
       className={"min-h-screen flex flex-col items-center justify-center gap-2"}

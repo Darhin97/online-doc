@@ -44,13 +44,12 @@ export const LineHeightExtension = Extension.create({
     return {
       setLineHeight:
         (lineHeight: string) =>
-        // @ts-ignore
         ({ tr, state, dispatch }) => {
           const { selection } = state;
           tr = tr.setSelection(selection);
 
           const { from, to } = selection;
-          // @ts-ignore
+
           state.doc.nodesBetween(from, to, (node, pos) => {
             if (this.options.types.includes(node.type.name)) {
               tr = tr.setNodeMarkup(pos, undefined, {
@@ -64,13 +63,12 @@ export const LineHeightExtension = Extension.create({
         },
       unsetLineHeight:
         () =>
-        // @ts-ignore
         ({ tr, state, dispatch }) => {
           const { selection } = state;
           tr = tr.setSelection(selection);
 
           const { from, to } = selection;
-          // @ts-ignore
+
           state.doc.nodesBetween(from, to, (node, pos) => {
             if (this.options.types.includes(node.type.name)) {
               tr = tr.setNodeMarkup(pos, undefined, {
